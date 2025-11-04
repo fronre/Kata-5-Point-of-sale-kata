@@ -10,6 +10,7 @@ from src.point_of_sale import point_of_sale
     ("00000", "Error: barcode not found"),
     ("1234a", "Error: barcode not found"),
     ("TOTAL", "Error: barcode not found"),
+    ("54321", "Error: barcode not found"),
 
 ])
 def test_point_of_sale_various_cases(barcode, expected):
