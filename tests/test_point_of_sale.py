@@ -1,6 +1,4 @@
-def test():
-     point_of_sale()
+from src.point_of_sale import point_of_sale
 
-
-  def point_of_sale():
-        pass
+def test_point_of_sale():
+    point_of_sale()
