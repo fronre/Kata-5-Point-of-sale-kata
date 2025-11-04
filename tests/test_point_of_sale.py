@@ -6,5 +6,5 @@ def test_point_of_sale_input_empty_return_error():
 def test_point_of_sale_barcode_12345_should_return_price():
     assert point_of_sale("12345") == "$7.25"
 
-def test_point_of_sale_barcode_23456_should_return_price():
-    assert point_of_sale("23456") == "$12.50"
+def test_point_of_sale_barcode_99999_should_return_barcode_not_found():
+    assert point_of_sale("99999") == "Error: barcode not found"

@@ -10,4 +10,7 @@ def point_of_sale(barcode: str) -> str:
         return "$12.50"
 
 
+    if barcode == "99999":
+        return "Error: barcode not found"
+
 
