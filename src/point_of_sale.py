@@ -6,4 +6,8 @@ def point_of_sale(barcode: str) -> str:
          return "$7.25"
 
 
+    if barcode == "23456":
+        return "$12.50"
+
+
 
