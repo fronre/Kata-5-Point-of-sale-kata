@@ -1,16 +1,22 @@
+prices = {
+    "12345": 7.25,
+    "23456": 12.50,
+}
+
+total_sale = 0
+
 def point_of_sale(barcode: str) -> str:
-    if barcode == "":
-        return "Error: barcode is empty"
+    global total_sale
+    barcode = barcode.strip()
 
-    if barcode == "12345":
-         return "$7.25"
+    if len(barcode) == 0:
+        return "Error: empty barcode"
 
+    if barcode == "total":
+        return f"${total_sale:.2f}"
 
-    if barcode == "23456":
-        return "$12.50"
+    if barcode in prices:
+        total_sale += prices[barcode]
+        return f"${prices[barcode]:.2f}"
 
-
-    if barcode == "99999":
-        return "Error: barcode not found"
-
-
+    return "Error: barcode not found"
