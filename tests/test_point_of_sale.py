@@ -1,4 +1,4 @@
 from src.point_of_sale import point_of_sale
 
-def test_point_of_sale_is_callable():
-    point_of_sale(123)
+def test_point_of_sale_input_empty_return_error():
+    assert point_of_sale("") == "Error: barcode is empty"
